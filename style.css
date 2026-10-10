@@ -1706,13 +1706,14 @@ img {
   }
 
   .nichol-tab-bar {
-    justify-content: flex-start;
-    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: nowrap;
-    padding: 4px 8px 12px;
-    margin: 0 -12px 28px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    padding: 0;
+    margin: 0 auto 28px;
+    gap: 6px;
+    width: 100%;
   }
 
   .nichol-tab-bar::-webkit-scrollbar {
@@ -1722,8 +1723,8 @@ img {
   .tab-chip {
     white-space: nowrap;
     flex-shrink: 0;
-    padding: 8px 18px;
-    font-size: 0.85rem;
+    padding: 6px 12px;
+    font-size: 0.78rem;
   }
 
   .section-container {
@@ -1732,5 +1733,16 @@ img {
 
   .nichol-message-form {
     padding: 24px 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nichol-tab-bar {
+    gap: 4px;
+  }
+
+  .tab-chip {
+    padding: 5px 8px;
+    font-size: 0.72rem;
   }
 }
