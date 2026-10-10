@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanchat Ampansap | Full-Stack Software Engineer</title>
+  <meta name="description"
+    content="Portfolio of Mr.Sanchat Ampansap (Run) - Full-Stack Software Engineer specializing in modern web applications, cloud backends, algo trading, and automation.">
+  <meta name="keywords"
+    content="Portfolio, Full-Stack Developer, Software Engineer, Nichol Theme, React, Node.js, MQL5, n8n, Web Developer Thailand">
+  <meta name="author" content="Sanchat Ampansap">
+
+  <!-- Open Graph / Meta for Social Sharing & GitHub -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sanchat Ampansap | Full-Stack Software Engineer">
+  <meta property="og:description" content="Portfolio of Sanchat Ampansap (Run) - Full-Stack Software Engineer.">
+  <meta property="og:image" content="./img/favicon.png">
+
+  <!-- Favicon (Brand Logo: Purple & Yellow Bars) -->
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
+  <link rel="apple-touch-icon" href="./img/favicon.png">
+  <link rel="shortcut icon" href="./img/favicon.ico">
+
+  <!-- Google Fonts: Sora (Signature Nichol Font) & Prompt (Thai) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Unicons Icon Font (Used by Nichol template) -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- Floating Left Edge Controls (Nichol Signature Feature: RTL / Dark Switches) -->
+  <div class="nichol-floating-switcher">
+    <!-- Language Switcher (TH / EN) -->
+    <button id="lang-toggle-btn" class="floating-btn btn-lang" title="Toggle Language (TH/EN)">
+      <span id="lang-label">TH</span>
+    </button>
+    <!-- Dark / Light Mode Switcher -->
+    <button id="theme-toggle-btn" class="floating-btn btn-theme" title="Toggle Dark/Light Mode">
+      <span id="theme-label">Dark</span>
+    </button>
+  </div>
+
+  <!-- Header / Navigation Bar (Nichol Dark Bar) -->
+  <header class="nichol-navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo: Purple/Yellow bars icon + Brand Name -->
+      <a href="#home" class="brand-logo-group" aria-label="Home">
+        <div class="logo-symbol">
+          <span class="bar-purple"></span>
+          <span class="bar-yellow"></span>
+        </div>
+        <span class="brand-name">Sanchat<span class="brand-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-center-menu" id="nav-menu">
+        <a href="#home" class="nav-link-item active" data-i18n="nav_home">Home</a>
+        <a href="#skills" class="nav-link-item" data-i18n="nav_skills">Skills</a>
+        <a href="#projects" class="nav-link-item" data-i18n="nav_projects">Projects</a>
+        <a href="#experience" class="nav-link-item" data-i18n="nav_experience">Experience</a>
+        <a href="#contact" class="nav-link-item" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <!-- Right Action CTA Button -->
+      <div class="nav-right-actions">
+        <a href="#contact" class="btn-chat" data-i18n="nav_cta">Let's Chat</a>
+        <!-- Mobile Toggle Hamburger -->
+        <button id="mobile-toggle-btn" class="mobile-burger" aria-label="Toggle menu" aria-expanded="false">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <div class="brand-logo-group">
+        <div class="logo-symbol">
+          <span class="bar-purple"></span>
+          <span class="bar-yellow"></span>
+        </div>
+        <span class="brand-name">Sanchat.</span>
+      </div>
+      <button id="drawer-close-btn" class="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#home" class="drawer-link-item" data-i18n="nav_home">Home</a>
+      <a href="#skills" class="drawer-link-item" data-i18n="nav_skills">Skills</a>
+      <a href="#projects" class="drawer-link-item" data-i18n="nav_projects">Projects</a>
+      <a href="#experience" class="drawer-link-item" data-i18n="nav_experience">Experience</a>
+      <a href="#contact" class="drawer-link-item" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="drawer-footer">
+      <a href="#contact" class="btn-chat btn-block" data-i18n="nav_cta">Let's Chat</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION (Nichol 50/50 Split Screen Layout) -->
+    <section class="nichol-split-hero" id="home">
+      <!-- Left 50% Column: White Background & Typography -->
+      <div class="hero-col-left">
+        <div class="hero-left-inner">
+          <!-- Yellow Badge Pill -->
+          <div class="hero-pill-badge" id="hero-greeting-badge">
+            Hi! I'm Mr.Sanchat Ampansap (Run)
+          </div>
+
+
+          <!-- Bio Description as Main Heading (Rendered from data.js) -->
+          <h1 class="hero-heading-desc" id="hero-desc-text" data-i18n="hero_desc"></h1>
+
+          <!-- Action Buttons -->
+          <div class="hero-button-group">
+            <a href="#contact" class="btn-nichol-purple">
+              <i class="uil uil-user"></i>
+              <span id="hero-btn-hire" data-i18n="nav_cta">Hire Me</span>
+            </a>
+            <a href="#projects" class="btn-nichol-outline">
+              <i class="uil uil-file-alt"></i>
+              <span id="hero-btn-cv" data-i18n="hero_view_projects">View Projects</span>
+            </a>
+          </div>
+
+          <!-- Stats Counter Row Underneath -->
+          <div class="hero-stats-strip">
+            <div class="stat-cell">
+              <span class="stat-number">5+</span>
+              <span class="stat-text" id="stat-lbl-1">Years Experience</span>
+            </div>
+            <div class="stat-cell">
+              <span class="stat-number">20+</span>
+              <span class="stat-text" id="stat-lbl-2">Projects Done</span>
+            </div>
+            <div class="stat-cell">
+              <span class="stat-number">100%</span>
+              <span class="stat-text" id="stat-lbl-3">Worldwide Clients</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right 50% Column: Radiant Yellow/Purple Gradient with Watermark & Cutout -->
+      <div class="hero-col-right">
+        <!-- Radiant Gradient Backdrop -->
+        <div class="hero-radiant-bg"></div>
+
+        <!-- Huge Transparent Name Watermark -->
+        <div class="hero-watermark-text" aria-hidden="true">
+          <span>SANCHAT</span>
+          <span>AMPANSAP</span>
+        </div>
+
+        <!-- Cutout Developer Portrait Image -->
+        <div class="hero-cutout-container">
+          <img src="./img/img.png" alt="Mr. Sanchat Ampansap" class="hero-avatar-cutout">
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- SKILLS SECTION (Masterful Talents in Nichol) -->
+    <section class="section-container bg-surface-alt" id="skills">
+      <div class="content-wrapper">
+        <div class="section-header-pill">
+          <div class="tag-sparkle-pill">
+            <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M4.33 9.58C5.36 9.84 6.16 10.64 6.42 11.67L7.38 15.51C7.45 15.8 7.71 16 8 16C8.29 16 8.55 15.8 8.62 15.51L9.58 11.67C9.84 10.64 10.64 9.84 11.67 9.58L15.51 8.62C15.8 8.55 16 8.29 16 8C16 7.71 15.8 7.45 15.51 7.38L11.67 6.42C10.64 6.16 9.84 5.36 9.58 4.33L8.62 0.49C8.55 0.2 8.29 0 8 0C7.71 0 7.45 0.2 7.38 0.49L6.42 4.33C6.16 5.36 5.36 6.16 4.33 6.42L0.49 7.38C0.2 7.45 0 7.71 0 8C0 8.29 0.2 8.55 0.49 8.62L4.33 9.58Z" />
+            </svg>
+            <span data-i18n="skills_badge">ทักษะและความเชี่ยวชาญ</span>
+          </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="nichol-tab-bar" id="skill-filter-tabs">
+          <button class="tab-chip active" data-category="all" data-i18n="tab_all">All</button>
+          <button class="tab-chip" data-category="frontend" data-i18n="tab_frontend">Frontend</button>
+          <button class="tab-chip" data-category="backend" data-i18n="tab_backend">Backend & DB</button>
+          <button class="tab-chip" data-category="tools" data-i18n="tab_tools">DevOps & Tools</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-catalog-grid" id="skills-grid">
+          <!-- Rendered via script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (Showcasing My Remarkable Projects in Nichol) -->
+    <section class="section-container" id="projects">
+      <div class="content-wrapper">
+        <div class="section-header-pill">
+          <div class="tag-sparkle-pill">
+            <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M4.33 9.58C5.36 9.84 6.16 10.64 6.42 11.67L7.38 15.51C7.45 15.8 7.71 16 8 16C8.29 16 8.55 15.8 8.62 15.51L9.58 11.67C9.84 10.64 10.64 9.84 11.67 9.58L15.51 8.62C15.8 8.55 16 8.29 16 8C16 7.71 15.8 7.45 15.51 7.38L11.67 6.42C10.64 6.16 9.84 5.36 9.58 4.33L8.62 0.49C8.55 0.2 8.29 0 8 0C7.71 0 7.45 0.2 7.38 0.49L6.42 4.33C6.16 5.36 5.36 6.16 4.33 6.42L0.49 7.38C0.2 7.45 0 7.71 0 8C0 8.29 0.2 8.55 0.49 8.62L4.33 9.58Z" />
+            </svg>
+            <span data-i18n="projects_badge">ผลงาน</span>
+          </div>
+        </div>
+
+        <!-- Project Filter Tabs -->
+        <div class="nichol-tab-bar" id="project-filter-tabs">
+          <button class="tab-chip active" data-filter="all" data-i18n="proj_filter_all">All</button>
+          <button class="tab-chip" data-filter="automation" data-i18n="proj_filter_automation">Automation</button>
+          <button class="tab-chip" data-filter="webapp" data-i18n="proj_filter_webapp">Web Apps</button>
+          <button class="tab-chip" data-filter="trading" data-i18n="proj_filter_trading">Trade</button>
+          <button class="tab-chip" data-filter="server" data-i18n="proj_filter_server">Linux</button>
+        </div>
+
+        <!-- Projects Cards Grid -->
+        <div class="projects-catalog-grid" id="projects-grid">
+          <!-- Rendered via script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION (Life Time / Education & Experience in Nichol) -->
+    <section class="section-container bg-surface-alt" id="experience">
+      <div class="content-wrapper">
+        <div class="section-header-pill">
+          <div class="tag-sparkle-pill">
+            <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M4.33 9.58C5.36 9.84 6.16 10.64 6.42 11.67L7.38 15.51C7.45 15.8 7.71 16 8 16C8.29 16 8.55 15.8 8.62 15.51L9.58 11.67C9.84 10.64 10.64 9.84 11.67 9.58L15.51 8.62C15.8 8.55 16 8.29 16 8C16 7.71 15.8 7.45 15.51 7.38L11.67 6.42C10.64 6.16 9.84 5.36 9.58 4.33L8.62 0.49C8.55 0.2 8.29 0 8 0C7.71 0 7.45 0.2 7.38 0.49L6.42 4.33C6.16 5.36 5.36 6.16 4.33 6.42L0.49 7.38C0.2 7.45 0 7.71 0 8C0 8.29 0.2 8.55 0.49 8.62L4.33 9.58Z" />
+            </svg>
+            <span data-i18n="exp_badge">เส้นทางอาชีพ</span>
+          </div>
+        </div>
+
+        <div class="lifetime-timeline" id="experience-timeline">
+          <!-- Rendered via script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION (Got Ideas? We've got the skills. Let's team up.) -->
+    <section class="section-container" id="contact">
+      <div class="content-wrapper">
+        <div class="section-header-pill">
+          <div class="tag-sparkle-pill">
+            <svg class="star-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M4.33 9.58C5.36 9.84 6.16 10.64 6.42 11.67L7.38 15.51C7.45 15.8 7.71 16 8 16C8.29 16 8.55 15.8 8.62 15.51L9.58 11.67C9.84 10.64 10.64 9.84 11.67 9.58L15.51 8.62C15.8 8.55 16 8.29 16 8C16 7.71 15.8 7.45 15.51 7.38L11.67 6.42C10.64 6.16 9.84 5.36 9.58 4.33L8.62 0.49C8.55 0.2 8.29 0 8 0C7.71 0 7.45 0.2 7.38 0.49L6.42 4.33C6.16 5.36 5.36 6.16 4.33 6.42L0.49 7.38C0.2 7.45 0 7.71 0 8C0 8.29 0.2 8.55 0.49 8.62L4.33 9.58Z" />
+            </svg>
+            <span data-i18n="contact_badge">ติดต่อพูดคุย</span>
+          </div>
+          <h2 class="section-title-large" id="contact-section-title" data-i18n="contact_title">
+            ติดต่อพูดคุยเรื่องโปรเจกต์</h2>
+          <p class="section-subtitle-text" data-i18n="contact_subtitle">มีไอเดียหรือโปรเจกต์ที่ต้องการพัฒนา?
+            ส่งข้อความมาคุยกันได้เลยครับ</p>
+        </div>
+
+        <div class="contact-split-grid">
+          <!-- Left: Direct Channels -->
+          <div class="contact-channels-side">
+            <h3 class="side-heading" id="contact-panel-sub">มาเริ่มพัฒนาโปรเจกต์ด้วยกัน</h3>
+            <p class="side-text" id="contact-panel-note">พร้อมรับฟังไอเดียและให้คำปรึกษาในการพัฒนาซอฟต์แวร์ทุกรูปแบบ
+              สามารถติดต่อได้ผ่านช่องทางด้านล่างนี้ครับ</p>
+
+            <div class="channels-stack">
+              <!-- Email Card with Copy Button -->
+              <div class="channel-card">
+                <div class="channel-icon-box"><i class="uil uil-envelope"></i></div>
+                <div class="channel-info-box">
+                  <span class="channel-lbl" data-i18n="contact_email_label">อีเมล (คลิกเพื่อคัดลอก)</span>
+                  <span class="channel-txt" id="contact-email-val">sanchat.ampansap.1996@gmail.com</span>
+                </div>
+                <button class="channel-copy-btn" id="copy-email-btn" title="Copy Email">
+                  <i class="uil uil-copy"></i>
+                </button>
+              </div>
+
+              <!-- LINE OA Card -->
+              <a href="https://lin.ee/WpjTc2N" target="_blank" rel="noopener noreferrer" class="channel-card"
+                id="contact-line-link">
+                <div class="channel-icon-box"><i class="uil uil-comment-message"></i></div>
+                <div class="channel-info-box">
+                  <span class="channel-lbl" data-i18n="contact_line_label">ไลน์ (LINE Official Account)</span>
+                  <span class="channel-txt" id="contact-line-val">RunDev</span>
+                </div>
+                <span class="channel-ext-arrow"><i class="uil uil-arrow-up-right"></i></span>
+              </a>
+
+              <!-- Location Card -->
+              <div class="channel-card">
+                <div class="channel-icon-box"><i class="uil uil-location-pin-alt"></i></div>
+                <div class="channel-info-box">
+                  <span class="channel-lbl" data-i18n="contact_location_label">ที่อยู่ / รูปแบบการทำงาน</span>
+                  <span class="channel-txt" id="contact-location-val">เมืองเชียงราย, ประเทศไทย (Remote / Onsite)</span>
+                </div>
+              </div>
+
+              <!-- GitHub Profile Card -->
+              <a href="https://github.com/rundevsite" target="_blank" rel="noopener noreferrer" class="channel-card"
+                id="contact-github-link">
+                <div class="channel-icon-box"><i class="uil uil-github"></i></div>
+                <div class="channel-info-box">
+                  <span class="channel-lbl">GitHub Profile</span>
+                  <span class="channel-txt" id="contact-github-val">github.com/rundevsite</span>
+                </div>
+                <span class="channel-ext-arrow"><i class="uil uil-arrow-up-right"></i></span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Form -->
+          <div class="contact-form-side">
+            <form id="contact-form" class="nichol-message-form">
+              <div class="form-grid-pair">
+                <div class="input-cell">
+                  <label for="form-name" class="field-label" data-i18n="form_name_label">ชื่อของคุณ *</label>
+                  <input type="text" id="form-name" class="field-input" required placeholder="เช่น สมชาย ใจดี">
+                </div>
+                <div class="input-cell">
+                  <label for="form-email" class="field-label" data-i18n="form_email_label">อีเมลติดต่อกลับ *</label>
+                  <input type="email" id="form-email" class="field-input" required placeholder="name@example.com">
+                </div>
+              </div>
+
+              <div class="input-cell">
+                <label for="form-subject" class="field-label" data-i18n="form_subject_label">หัวข้อโปรเจกต์</label>
+                <input type="text" id="form-subject" class="field-input"
+                  placeholder="เช่น พัฒนาเว็บไซต์ / เว็บแอปพลิเคชัน">
+              </div>
+
+              <div class="input-cell">
+                <label for="form-message" class="field-label" data-i18n="form_msg_label">รายละเอียดข้อความ *</label>
+                <textarea id="form-message" class="field-textarea" rows="5" required
+                  placeholder="เล่ารายละเอียดโปรเจกต์ งบประมาณ หรือสิ่งที่ต้องการ..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-nichol-purple btn-full form-submit-btn">
+                <span data-i18n="form_submit_btn">ส่งข้อความถึงผม</span>
+                <i class="uil uil-message"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="nichol-bottom-footer">
+    <div class="content-wrapper">
+
+
+      <div class="footer-lower">
+        <p class="copyright-line" id="footer-copyright" data-i18n="footer_rights">
+          © 2026 Mr.Sanchat Ampansap (Run). All rights reserved.
+        </p>
+
+        <div class="footer-nav-unit">
+          <a href="#home" data-i18n="nav_home">Home</a>
+          <a href="#skills" data-i18n="nav_skills">Skills</a>
+          <a href="#projects" data-i18n="nav_projects">Projects</a>
+          <a href="#experience" data-i18n="nav_experience">Experience</a>
+          <a href="#contact" data-i18n="nav_contact">Contact</a>
+        </div>
+
+        <div class="footer-social-cluster">
+          <a href="https://github.com/rundevsite" target="_blank" rel="noopener noreferrer" title="GitHub"
+            id="footer-github-link">
+            <i class="uil uil-github-alt"></i>
+          </a>
+          <a href="https://lin.ee/WpjTc2N" target="_blank" rel="noopener noreferrer" title="LINE OA"
+            id="footer-line-link">
+            <i class="uil uil-comment"></i>
+          </a>
+          <a href="mailto:sanchat.ampansap.1996@gmail.com" title="Email" id="footer-email-link">
+            <i class="uil uil-envelope-alt"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Scroll-To-Top Button -->
+  <button id="scroll-top-btn" class="nichol-back-top" aria-label="Scroll to top" title="Back to top">
+    <i class="uil uil-arrow-up"></i>
+  </button>
+
+  <!-- Interactive Toast Notification -->
+  <div id="toast" class="nichol-toast-bubble" role="alert" aria-live="assertive">
+    <span class="toast-star">✨</span>
+    <span class="toast-msg" id="toast-message">แจ้งเตือน</span>
+  </div>
+
+  <!-- Central Data & Logic Scripts -->
+  <script src="./data.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
