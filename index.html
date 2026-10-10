@@ -23,15 +23,24 @@
   <link rel="apple-touch-icon" href="./img/favicon.png">
   <link rel="shortcut icon" href="./img/favicon.ico">
 
-  <!-- Google Fonts: Sora (Signature Nichol Font) & Prompt (Thai) -->
+  <!-- Preload Hero LCP Image -->
+  <link rel="preload" as="image" href="./img/img.webp" type="image/webp" fetchpriority="high">
+
+  <!-- Google Fonts: Sora & Prompt (Optimized font-display & non render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&family=Sora:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&family=Sora:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&family=Sora:wght@400;600;700;800&display=swap">
+  </noscript>
 
-  <!-- Unicons Icon Font (Used by Nichol template) -->
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <!-- Unicons Icon Font (Zero-cookie CDN, non render-blocking) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+  </noscript>
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="./style.css">
@@ -169,7 +178,10 @@
 
         <!-- Cutout Developer Portrait Image -->
         <div class="hero-cutout-container">
-          <img src="./img/img.png" alt="Mr. Sanchat Ampansap" class="hero-avatar-cutout">
+          <picture>
+            <source srcset="./img/img.webp" type="image/webp">
+            <img src="./img/img.png" alt="Mr. Sanchat Ampansap" class="hero-avatar-cutout" width="889" height="965" fetchpriority="high" decoding="async">
+          </picture>
         </div>
       </div>
     </section>

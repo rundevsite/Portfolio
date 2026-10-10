@@ -602,6 +602,7 @@ img {
 .hero-avatar-cutout {
   width: 100%;
   height: auto;
+  aspect-ratio: 889 / 965;
   max-height: calc(100vh - var(--nav-height) - 40px);
   object-fit: contain;
   display: block;
